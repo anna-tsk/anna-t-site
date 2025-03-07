@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: monospace;
+        }
+        #messages {
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <h1>Chat</h1>
+    <div id="messages"></div>
+    <input type="text" id="messageInput" placeholder="Type a message..." autofocus>
+    <button onclick="sendMessage()">Send</button>
+
+    <script>
+        const backend_url = "https://your-fastapi-backend.com";  // Change this when you deploy backend
+        const conversationId = "your-conversation-id";  // Use a real one
+
+        async function sendMessage() {
+            const text = document.getElementById("messageInput").value;
+            if (!text) return;
+
+            await fetch(`${backend_url}/send_message`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    conversation_id: conversationId,
+                    sender: "user",
+                    text: text,
+                    turn_order: 1
+                })
+            });
+
+            document.getElementById("messageInput").value = "";
+            loadMessages();
+        }
+
+        async function loadMessages() {
+            const response = await fetch(`${backend_url}/get_messages?conversation_id=${conversationId}`);
+            const data = await response.json();
+            document.getElementById("messages").innerText = data.messages.map(m => `${m.sender}: ${m.text}`).join("\n");
+        }
+
+        loadMessages();
+        setInterval(loadMessages, 3000);
+    </script>
+</body>
+</html>
