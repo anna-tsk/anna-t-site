@@ -18,11 +18,11 @@
 <body>
     <h1>Chat</h1>
     <div id="messages"></div>
-    <input type="text" id="messageInput" placeholder="Type a message..." autofocus>
+    <input type="text" id="messageInput" placeholder="Type message..." autofocus>
     <button onclick="sendMessage()">Send</button>
 
     <script>
-        const backend_url = "https://your-fastapi-backend.com";  // Change this when you deploy backend
+        const backend_url = "https://chat-backend-iplh.onrender.com";  // Change this when you deploy backend
         const conversationId = "your-conversation-id";  // Use a real one
 
         async function sendMessage() {
