@@ -58,7 +58,13 @@
             <div class="site-title">
                 <h1><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
             </div>
-            <a href="{{ site.baseurl }}/" class="back-link" style="color: gray;">&larr; back to blog</a>
+            
+            {% if page.layout == "post" %}
+            <a href="{{ '/blog.html' | relative_url }}" class="back-link" style="color: gray;">&larr; back to blog</a>
+            {% elsif page.layout == "blog" %}
+            <a href="{{ '/' | relative_url }}" class="back-link" style="color: gray;">&larr; back to homepage</a>
+            {% endif %}
+
             <div class="page-title">
                 <h2>{{ page.title }}</h2>
             </div>
