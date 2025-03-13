@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} - {{ site.title }}</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'IBM Plex Sans', sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .site-title {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+
+        .page-title {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        main {
+            text-align: left;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        h1, h2 {
+            margin: 0;
+        }
+
+        .back-link {
+            margin-bottom: 20px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="site-title">
+                <h1><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
+            </div>
+            <a href="{{ site.baseurl }}/" class="back-link" style="color: gray;">&larr; back to blog</a>
+            <div class="page-title">
+                <h2>{{ page.title }}</h2>
+            </div>
+        </header>
+
+        <main>
+            {{ content }}
+        </main>
+    </div>
+</body>
+</html>

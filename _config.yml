@@ -1,0 +1,24 @@
+# Site settings
+title: anna-t.xyz
+description: A simple Jekyll site for my blog.
+baseurl: "" # the subpath of your site, e.g. /blog (leave empty if at root)
+url: "http://localhost:4000" # update this when deploying to production
+
+# Build settings
+markdown: kramdown
+
+# Include directories for assets
+include:
+  - _sass
+  - assets
+
+# Sass configuration
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Exclude the _site directory from build (just in case)
+exclude:
+  - _site
+  - .jekyll-cache
+  - .sass-cache

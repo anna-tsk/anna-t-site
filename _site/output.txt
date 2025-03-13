@@ -1,0 +1,6 @@
+Configuration file: /Users/anna/Dropbox/AnnaT_WebsiteCode/anna-t-site/_config.yml
+            Source: /Users/anna/Dropbox/AnnaT_WebsiteCode/anna-t-site
+       Destination: /Users/anna/Dropbox/AnnaT_WebsiteCode/anna-t-site/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+       Jekyll Feed: Generating feed for posts
