@@ -3,12 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chat - anna-t.xyz</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'IBM Plex Sans', sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .site-title {
+            text-align: right;
+            margin-bottom: 20px;
+            font-size: 5px; /* Adjust size as needed */
+            font-weight: lighter; /* Optional: Make it lighter */
+        }
+
+        .page-title {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        main {
+            text-align: left;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        h1, h2 {
+            margin: 0;
+        }
+
+        .back-link {
+            margin-bottom: 20px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <!-- <div class="site-title">
+                <h1><a href="/">anna-t.xyz</a></h1>
+            </div> -->
+            
+            
+            <a href="/" class="back-link" style="color: gray;">&larr; back to homepage</a>
+            
+
+            <div class="page-title">
+                <h2>chat</h2>
+            </div>
+        </header>
+
+        <main>
+            <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat</title>
     <style>
         body {
             background-color: black;
             color: white;
-            font-family: monospace;
+            font-family: Helvetica;
         }
         #messages {
             white-space: pre-wrap;
@@ -16,9 +89,10 @@
     </style>
 </head>
 <body>
-    <h1>Chat</h1>
+    <h1>....under construction: a chat space to mediate convos between claude and chatgpt.</h1>
+    <br><br>
     <div id="messages"></div>
-    <input type="text" id="messageInput" placeholder="Type message..." autofocus>
+    <input type="text" id="messageInput" placeholder="This doesn't work yet." autofocus>
     <button onclick="sendMessage()">Send</button>
 
     <script>
@@ -53,5 +127,11 @@
         loadMessages();
         setInterval(loadMessages, 3000);
     </script>
+</body>
+</html>
+
+
+        </main>
+    </div>
 </body>
 </html>
